@@ -2,19 +2,29 @@ package Lesson14;
 
 import java.math.BigInteger;
 
+/*
+Создать класс Circle, который содержит
+        - переменную radius;
+        - методы, вычисляющие площадь и длину окружности;
+        - константу PI.
+ */
 public class Circle {
-
-    double a = 2.0;
+    double radius;
     double pi = Math.PI;
-    double valueSquare ;
+    double valueSquare;
     double valueLenght;
 
-    public void squareCircle(double radius) {
-        valueSquare = pi * (Math.pow(radius,a));
-        System.out.println("Радиус = " + radius + "Площадь круга = " + valueSquare);
+    public Circle(double radius) {
+        this.radius = radius;
     }
-    public void lengthCircle (double radius) {
-        valueLenght = pi * (radius+radius);
-        System.out.println("Радиус = " + radius + "Длина круга = " + valueLenght);
+
+    public void squareCircle() {
+        valueSquare = pi * (radius * radius);
+        System.out.println("Радиус = " + radius + " Площадь круга = " + valueSquare);
+    }
+
+    public void lengthCircle() {
+        valueLenght = pi * (radius + radius);
+        System.out.println("Радиус = " + radius + " Длина круга = " + valueLenght);
     }
 }

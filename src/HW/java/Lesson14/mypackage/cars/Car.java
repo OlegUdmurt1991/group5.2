@@ -1,5 +1,5 @@
 package Lesson14.mypackage.cars;
-
+/*класс Car в пакете mypackage.cars со статическим методом move().*/
 public class Car {
 //    // Инициализация
 //    static {

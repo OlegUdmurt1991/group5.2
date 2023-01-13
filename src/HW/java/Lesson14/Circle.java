@@ -6,21 +6,19 @@ package Lesson14;
         - константу PI. */
 public class Circle {
     double radius;
-    double pi = Math.PI;
-    double valueSquare; //Площадь
-    double valueLenght;  //Длина
+    final double PI = Math.PI;
 
     public Circle(double radius) {
         this.radius = radius;
     }
 
-    public void squareCircle() {
-        valueSquare = pi * (radius * radius);
+    public void squareCircle() { //площадь круга
+        double valueSquare = PI * (radius * radius);
         System.out.println("Радиус = " + radius + " Площадь круга = " + valueSquare);
     }
 
-    public void lengthCircle() {
-        valueLenght = pi * (radius + radius);
+    public void lengthCircle() { //Длина круга
+        double valueLenght = PI * (radius + radius);
         System.out.println("Радиус = " + radius + " Длина круга = " + valueLenght);
     }
 }

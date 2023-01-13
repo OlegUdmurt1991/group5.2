@@ -5,11 +5,11 @@ package Lesson14;
 public class Main {
     public static void main(String[] args) {
 
-        Circle resultNumbers = new Circle(15);
-        Circle resultNumbers2 = new Circle(2);
+        Circle circle1 = new Circle(15); //площадь круга
+        Circle circle2 = new Circle(2);  //Длина круга
 
-        resultNumbers.squareCircle();
-        resultNumbers2.lengthCircle();
+        circle1.squareCircle();
+        circle2.lengthCircle();
 
     }
 }

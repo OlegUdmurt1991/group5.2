@@ -1,18 +1,14 @@
 package Lesson14;
-
-import java.math.BigInteger;
-
 /*
 Создать класс Circle, который содержит
         - переменную radius;
         - методы, вычисляющие площадь и длину окружности;
-        - константу PI.
- */
+        - константу PI. */
 public class Circle {
     double radius;
     double pi = Math.PI;
-    double valueSquare;
-    double valueLenght;
+    double valueSquare; //Площадь
+    double valueLenght;  //Длина
 
     public Circle(double radius) {
         this.radius = radius;

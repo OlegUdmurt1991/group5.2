@@ -9,7 +9,7 @@ public class Car {
 //    public static String a2 = move("a2");
     //метод
     public static String move (String a) {
-        System.out.println("This is method ! " + a);
+        System.out.println("This is methodd ! " + a);
         return a;
     }
 }

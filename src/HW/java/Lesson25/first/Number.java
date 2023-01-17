@@ -26,9 +26,9 @@ public class Number {
         Duration diffStartDateEndDate = Duration.between(startDate, endDate);
         Date nowDate = new Date();
         Duration dayMyBirthdayDiffNowDate = Duration.ofMillis(nowDate.getTime() - dayMyBirthdayDate.getTime());
-        System.out.println("Разница м/у ДР и тек. датой в формате Date: " + dayMyBirthdayDiffNowDate + '\n' + '\n'); //Зад-е 2
+        System.out.println("Разница м/у ДР и тек. датой в формате Date: " + dayMyBirthdayDiffNowDate ); //Зад-е 2
         System.out.println("Время, за которое выполняется программа из 1го задания по классу Date: "
-                + diffStartDateEndDate); //Зад-е 3 и4
+                + diffStartDateEndDate + '\n' + '\n'); //Зад-е 3 и4
 
 // Класс LocalDate
         LocalDateTime startLocalDate = LocalDateTime.now(); //Входная точка для для 3 задания
@@ -42,9 +42,9 @@ public class Number {
         Duration difStartLDandLD = Duration.between(startLocalDate, endLocalDate);
         LocalDate nowLocalDate = LocalDate.now();
         long difMyBirthdayLDNowLocalDate = ChronoUnit.DAYS.between(dayMyBirthdayLocalDate, nowLocalDate);
-        System.out.println("Разница между текущей датой и ДР в днях по классу LocalDate:  " + difMyBirthdayLDNowLocalDate + '\n' + '\n');
+        System.out.println("Разница между текущей датой и ДР в днях по классу LocalDate:  " + difMyBirthdayLDNowLocalDate );
         System.out.println("Время, за которое выполняется программа из 1го задания по классу LocalDate: " +
-                difStartLDandLD);
+                difStartLDandLD + '\n' + '\n');
 
 //Класс LocalDateTime
         LocalDateTime startLocalDateTime = LocalDateTime.now(); //Входная точка для для 3 задания
@@ -59,9 +59,9 @@ public class Number {
         Duration difStartLDTEndLDT = Duration.between(startLocalDateTime, endLocalDateTime);
         LocalDateTime nowLocalDateTime = LocalDateTime.now();
         Duration difMyBirthdayLDTNowLDT = Duration.between(nowLocalDateTime, dayMyBirthdayLDT);
-        System.out.println("Разница между текущей датой и ДР по классу LocalDateTime:  " + difMyBirthdayLDTNowLDT + '\n' + '\n');
+        System.out.println("Разница между текущей датой и ДР по классу LocalDateTime:  " + difMyBirthdayLDTNowLDT);
         System.out.println("Время, за которое выполняется программа из 1го задания по классу LocalDateTime: " +
-                difStartLDTEndLDT);
+                difStartLDTEndLDT + '\n' + '\n');
 
 //Класс ZonedDateTime
         LocalDateTime startZonedDateTime = LocalDateTime.now(); //Входная точка для для 3 задания
@@ -75,9 +75,9 @@ public class Number {
         Duration difStartZDTEndZDT = Duration.between(startZonedDateTime, endZonedDateTime);
         ZonedDateTime nowZDT = ZonedDateTime.now();
         Duration difMyBirthdayZDTNowZDT = Duration.between(nowZDT, dayMyBirthdayZDT);
-        System.out.println("Разница между текущей датой и ДР по классу ZonedDateTime:  " + difMyBirthdayZDTNowZDT + '\n' + '\n');
+        System.out.println("Разница между текущей датой и ДР по классу ZonedDateTime:  " + difMyBirthdayZDTNowZDT);
         System.out.println("Время, за которое выполняется программа из 1го задания по классу ZonedDateTime: " +
-                difStartZDTEndZDT);
+                difStartZDTEndZDT + '\n' + '\n');
 
 //Класс GregorianCalendar
         LocalDateTime startGregCal = LocalDateTime.now(); //Входная точка для для 3 задания
@@ -90,9 +90,10 @@ public class Number {
         LocalDateTime endGregCal = LocalDateTime.now(); //Выходная точка для для 3 задания
         Duration difStartGregCalEndGregCal = Duration.between(startGregCal,endGregCal);
         GregorianCalendar nowGregCal = new GregorianCalendar ();
-        System.out.println("Разница между текущей датой и ДР по классу GregorianCalendar  " + nowGregCal + '\n' + '\n');
+        Duration difMyBirthdayNowGrecCal = Duration.between(nowGregCal.toZonedDateTime(), dayMyBirthdayGregCal.toZonedDateTime());
+        System.out.println("Разница между текущей датой и ДР по классу GregorianCalendar  " + difMyBirthdayNowGrecCal );
         System.out.println("Время, за которое выполняется программа из 1го задания по классу GregorianCalendar: " +
-                difStartGregCalEndGregCal);
+                difStartGregCalEndGregCal + '\n' + '\n');
 
 
 

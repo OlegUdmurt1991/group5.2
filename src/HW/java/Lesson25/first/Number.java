@@ -41,7 +41,7 @@ Alltime - ms
 Date - ms
 LocalDate - ms
 LocalDateTime - ms
-...
+
 (для 5 классов из 1го задания)*/
 public class Number {
     public static void main(String[] args) {

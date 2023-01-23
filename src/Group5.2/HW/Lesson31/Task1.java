@@ -18,9 +18,3 @@ public class Task1 {
 
     }
 }
-
-
-
-
-//System.out.println(args.length);
-//        System.out.println("xbckj" + args[0]);

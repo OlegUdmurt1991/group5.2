@@ -3,4 +3,4 @@
 /src/Group5.2/
 target/
 .idea/
-.class/
+*class/

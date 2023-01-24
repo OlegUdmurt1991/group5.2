@@ -47,76 +47,76 @@ public class Number {
         System.out.println(new SimpleDateFormat("yy-MM-dd-EE-HH-mm-ss").format(dayMyBirthdayDate)); // Зад-е 1
         System.out.println(new SimpleDateFormat().format(dayMyBirthdayDate)); // Зад-е 1
         LocalDateTime endDate = LocalDateTime.now();//Выходная точка для для 3 задания
-        Duration diffStartDateEndDate = Duration.between(startDate, endDate);
+        Duration diffStartDateEndDate = Duration.between(startDate, endDate); // Зад-е 3
         Date nowDate = new Date();
-        Duration dayMyBirthdayDiffNowDate = Duration.ofMillis(nowDate.getTime() - dayMyBirthdayDate.getTime());
-        System.out.println("Разница м/у ДР и тек. датой в формате Date: " + dayMyBirthdayDiffNowDate); //Зад-е 2
+        Duration dayMyBirthdayDiffNowDate = Duration.ofMillis(nowDate.getTime() - dayMyBirthdayDate.getTime());//Зад-е 2
+        System.out.println("Разница между текущей датой и ДР в днях по классу Date: " + dayMyBirthdayDiffNowDate); //Зад-е 2
         System.out.println("Время, за которое выполняется программа из 1го задания по классу Date: "
                 + diffStartDateEndDate + '\n' + '\n'); //Зад-е 3 и4
 
 // Класс LocalDate
-        LocalDateTime startLocalDate = LocalDateTime.now(); //Входная точка для для 3 задания
-        LocalDate dayMyBirthdayLocalDate = LocalDate.of(1991, 8, 8);
-        System.out.println(DateTimeFormatter.ofLocalizedDate(FormatStyle.SHORT).format(dayMyBirthdayLocalDate));
-        System.out.println(DateTimeFormatter.ISO_DATE.format(dayMyBirthdayLocalDate));
-        System.out.println(DateTimeFormatter.BASIC_ISO_DATE.format(dayMyBirthdayLocalDate));
-        System.out.println(DateTimeFormatter.ISO_LOCAL_DATE.format(dayMyBirthdayLocalDate));
-        System.out.println(DateTimeFormatter.ofLocalizedDate(FormatStyle.FULL).format(dayMyBirthdayLocalDate));
-        LocalDateTime endLocalDate = LocalDateTime.now(); //Выходная точка для для 3 задания
-        Duration difStartLDandLD = Duration.between(startLocalDate, endLocalDate);
+        LocalDateTime startLocalDate = LocalDateTime.now(); //Входная точка для для 4 задания
+        LocalDate dayMyBirthdayLocalDate = LocalDate.of(1991, 8, 8);// Инициализируем объект с заданной датой
+        System.out.println(DateTimeFormatter.ofLocalizedDate(FormatStyle.SHORT).format(dayMyBirthdayLocalDate));// Зад-е 1
+        System.out.println(DateTimeFormatter.ISO_DATE.format(dayMyBirthdayLocalDate)); // Зад-е 1
+        System.out.println(DateTimeFormatter.BASIC_ISO_DATE.format(dayMyBirthdayLocalDate)); // Зад-е 1
+        System.out.println(DateTimeFormatter.ISO_LOCAL_DATE.format(dayMyBirthdayLocalDate)); // Зад-е 1
+        System.out.println(DateTimeFormatter.ofLocalizedDate(FormatStyle.FULL).format(dayMyBirthdayLocalDate)); // Зад-е 1
+        LocalDateTime endLocalDate = LocalDateTime.now(); //Выходная точка для для 4 задания
+        Duration difStartLDandLD = Duration.between(startLocalDate, endLocalDate);// Зад-е 4
         LocalDate nowLocalDate = LocalDate.now();
-        long difMyBirthdayLDNowLocalDate = ChronoUnit.DAYS.between(dayMyBirthdayLocalDate, nowLocalDate);
+        long difMyBirthdayLDNowLocalDate = ChronoUnit.DAYS.between(dayMyBirthdayLocalDate, nowLocalDate); //Зад-е 2
         System.out.println("Разница между текущей датой и ДР в днях по классу LocalDate:  " + difMyBirthdayLDNowLocalDate);
         System.out.println("Время, за которое выполняется программа из 1го задания по классу LocalDate: " +
-                difStartLDandLD + '\n' + '\n');
+                difStartLDandLD + '\n' + '\n'); // Зад-е 4
 
 //Класс LocalDateTime
-        LocalDateTime startLocalDateTime = LocalDateTime.now(); //Входная точка для для 3 задания
-        LocalDateTime dayMyBirthdayLDT = LocalDateTime.of(1991, 8, 8, 16, 8, 34);
-        System.out.println(DateTimeFormatter.ofLocalizedDate(FormatStyle.FULL).format(dayMyBirthdayLDT));
-        System.out.println(DateTimeFormatter.ofLocalizedDate(FormatStyle.SHORT).format(dayMyBirthdayLDT));
-        System.out.println(DateTimeFormatter.ofLocalizedDate(FormatStyle.LONG).format(dayMyBirthdayLDT));
-        System.out.println(DateTimeFormatter.ofLocalizedDate(FormatStyle.MEDIUM).format(dayMyBirthdayLDT));
-        System.out.println(DateTimeFormatter.ofLocalizedDate(FormatStyle.SHORT).format(dayMyBirthdayLDT));
-        System.out.println(DateTimeFormatter.BASIC_ISO_DATE.format(dayMyBirthdayLDT));
-        LocalDateTime endLocalDateTime = LocalDateTime.now(); //Выходная точка для для 3 задания
-        Duration difStartLDTEndLDT = Duration.between(startLocalDateTime, endLocalDateTime);
+        LocalDateTime startLocalDateTime = LocalDateTime.now(); //Входная точка для для 4 задания
+        LocalDateTime dayMyBirthdayLDT = LocalDateTime.of(1991, 8, 8, 16, 8, 34);// Инициализируем объект с заданной датой
+        System.out.println(DateTimeFormatter.ofLocalizedDate(FormatStyle.FULL).format(dayMyBirthdayLDT));// Зад-е 1
+        System.out.println(DateTimeFormatter.ofLocalizedDate(FormatStyle.SHORT).format(dayMyBirthdayLDT));// Зад-е 1
+        System.out.println(DateTimeFormatter.ofLocalizedDate(FormatStyle.LONG).format(dayMyBirthdayLDT));// Зад-е 1
+        System.out.println(DateTimeFormatter.ofLocalizedDate(FormatStyle.MEDIUM).format(dayMyBirthdayLDT));// Зад-е 1
+        System.out.println(DateTimeFormatter.ofLocalizedDate(FormatStyle.SHORT).format(dayMyBirthdayLDT));// Зад-е 1
+        System.out.println(DateTimeFormatter.BASIC_ISO_DATE.format(dayMyBirthdayLDT));// Зад-е 1
+        LocalDateTime endLocalDateTime = LocalDateTime.now(); //Выходная точка для для 4 задания
+        Duration difStartLDTEndLDT = Duration.between(startLocalDateTime, endLocalDateTime);// Зад-е 4
         LocalDateTime nowLocalDateTime = LocalDateTime.now();
-        Duration difMyBirthdayLDTNowLDT = Duration.between(nowLocalDateTime, dayMyBirthdayLDT);
+        Duration difMyBirthdayLDTNowLDT = Duration.between(nowLocalDateTime, dayMyBirthdayLDT); //Зад-е 2
         System.out.println("Разница между текущей датой и ДР по классу LocalDateTime:  " + difMyBirthdayLDTNowLDT);
         System.out.println("Время, за которое выполняется программа из 1го задания по классу LocalDateTime: " +
-                difStartLDTEndLDT + '\n' + '\n');
+                difStartLDTEndLDT + '\n' + '\n');// Зад-е 4
 
 //Класс ZonedDateTime
-        LocalDateTime startZonedDateTime = LocalDateTime.now(); //Входная точка для для 3 задания
-        ZonedDateTime dayMyBirthdayZDT = ZonedDateTime.parse("1991-08-08T15:45:00Z[Europe/Moscow]");
-        System.out.println(DateTimeFormatter.BASIC_ISO_DATE.format(dayMyBirthdayZDT));
-        System.out.println(DateTimeFormatter.ISO_INSTANT.format(dayMyBirthdayZDT));
-        System.out.println(DateTimeFormatter.ISO_DATE.format(dayMyBirthdayZDT));
-        System.out.println(DateTimeFormatter.ISO_OFFSET_DATE_TIME.format(dayMyBirthdayZDT));
-        System.out.println(DateTimeFormatter.ofLocalizedDate(FormatStyle.SHORT).format(dayMyBirthdayZDT));
-        LocalDateTime endZonedDateTime = LocalDateTime.now(); //Выходная точка для для 3 задания
-        Duration difStartZDTEndZDT = Duration.between(startZonedDateTime, endZonedDateTime);
+        LocalDateTime startZonedDateTime = LocalDateTime.now(); //Входная точка для для 4 задания
+        ZonedDateTime dayMyBirthdayZDT = ZonedDateTime.parse("1991-08-08T15:45:00Z[Europe/Moscow]");// Инициализируем объект с заданной датой
+        System.out.println(DateTimeFormatter.BASIC_ISO_DATE.format(dayMyBirthdayZDT));// Зад-е 1
+        System.out.println(DateTimeFormatter.ISO_INSTANT.format(dayMyBirthdayZDT));// Зад-е 1
+        System.out.println(DateTimeFormatter.ISO_DATE.format(dayMyBirthdayZDT));// Зад-е 1
+        System.out.println(DateTimeFormatter.ISO_OFFSET_DATE_TIME.format(dayMyBirthdayZDT));// Зад-е 1
+        System.out.println(DateTimeFormatter.ofLocalizedDate(FormatStyle.SHORT).format(dayMyBirthdayZDT));// Зад-е 1
+        LocalDateTime endZonedDateTime = LocalDateTime.now(); //Выходная точка для для 4 задания
+        Duration difStartZDTEndZDT = Duration.between(startZonedDateTime, endZonedDateTime);// Зад-е 4
         ZonedDateTime nowZDT = ZonedDateTime.now();
-        Duration difMyBirthdayZDTNowZDT = Duration.between(nowZDT, dayMyBirthdayZDT);
+        Duration difMyBirthdayZDTNowZDT = Duration.between(nowZDT, dayMyBirthdayZDT);//Зад-е 2
         System.out.println("Разница между текущей датой и ДР по классу ZonedDateTime:  " + difMyBirthdayZDTNowZDT);
         System.out.println("Время, за которое выполняется программа из 1го задания по классу ZonedDateTime: " +
-                difStartZDTEndZDT + '\n' + '\n');
+                difStartZDTEndZDT + '\n' + '\n');// Зад-е 4
 
 //Класс GregorianCalendar
-        LocalDateTime startGregCal = LocalDateTime.now(); //Входная точка для для 3 задания
+        LocalDateTime startGregCal = LocalDateTime.now(); //Входная точка для для 4 задания
         GregorianCalendar dayMyBirthdayGregCal = new GregorianCalendar(1991, 7, 8, 04, 15, 45);
-        System.out.println(dayMyBirthdayGregCal.getTime());
-        System.out.println(dayMyBirthdayGregCal.toZonedDateTime());
-        System.out.println(DateTimeFormatter.ISO_DATE.format(dayMyBirthdayGregCal.toZonedDateTime()));
-        System.out.println(DateTimeFormatter.ISO_LOCAL_DATE_TIME.format(dayMyBirthdayGregCal.toZonedDateTime()));
-        System.out.println(DateTimeFormatter.ISO_INSTANT.format(dayMyBirthdayGregCal.toZonedDateTime()));
-        LocalDateTime endGregCal = LocalDateTime.now(); //Выходная точка для для 3 задания
-        Duration difStartGregCalEndGregCal = Duration.between(startGregCal, endGregCal);
+        System.out.println(dayMyBirthdayGregCal.getTime());// Зад-е 1
+        System.out.println(dayMyBirthdayGregCal.toZonedDateTime());// Зад-е 1
+        System.out.println(DateTimeFormatter.ISO_DATE.format(dayMyBirthdayGregCal.toZonedDateTime()));// Зад-е 1
+        System.out.println(DateTimeFormatter.ISO_LOCAL_DATE_TIME.format(dayMyBirthdayGregCal.toZonedDateTime()));// Зад-е 1
+        System.out.println(DateTimeFormatter.ISO_INSTANT.format(dayMyBirthdayGregCal.toZonedDateTime()));// Зад-е 1
+        LocalDateTime endGregCal = LocalDateTime.now(); //Выходная точка для для 4 задания
+        Duration difStartGregCalEndGregCal = Duration.between(startGregCal, endGregCal);// Зад-е 4
         GregorianCalendar nowGregCal = new GregorianCalendar();
-        Duration difMyBirthdayNowGrecCal = Duration.between(nowGregCal.toZonedDateTime(), dayMyBirthdayGregCal.toZonedDateTime());
+        Duration difMyBirthdayNowGrecCal = Duration.between(nowGregCal.toZonedDateTime(), dayMyBirthdayGregCal.toZonedDateTime());//Зад-е 2
         System.out.println("Разница между текущей датой и ДР по классу GregorianCalendar  " + difMyBirthdayNowGrecCal);
         System.out.println("Время, за которое выполняется программа из 1го задания по классу GregorianCalendar: " +
-                difStartGregCalEndGregCal + '\n' + '\n');
+                difStartGregCalEndGregCal + '\n' + '\n');// Зад-е 4
     }
 }

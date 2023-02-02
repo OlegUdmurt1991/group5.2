@@ -9,9 +9,9 @@ public class First {
         int a = Integer.parseInt(args[0]);//В программу через аргументы командной строки передаются три целых числа: a.
         int b = Integer.parseInt(args[1]);//В программу через аргументы командной строки передаются три целых числа: b.
         int c = Integer.parseInt(args[2]);//В программу через аргументы командной строки передаются три целых числа: c.
-        if (a > b && a > c) {
+        if (a >= b && a >= c) {
             System.out.println("Число а самое большое: " + a);
-        } else if (b > a && b > c) {
+        } else if (b >= a && b >= c) {
             System.out.println("Число b самое большое: " + b);
         } else {
             System.out.println("Число c самое большое: " + c);

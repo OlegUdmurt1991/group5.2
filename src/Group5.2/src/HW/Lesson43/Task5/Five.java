@@ -22,17 +22,17 @@ public class Five {
         int b = Integer.parseInt(args[1]); //Товар стоит в Копейках
         int c = Integer.parseInt(args[2]); //За него заплатили столько рублей
         int d = Integer.parseInt(args[3]); //За него заплатили столько копеек
+        int aInKop = a * 100; //Стоимость рублевой части перевести в копейки
+        int cInKop = c * 100; //За него заплатили столько рублей и перевели в копейки
         int e; //Сдача в рублях
-        int f; //Сдача в копейках
-        if (a < 0 || b < 0 || c < 0 || d < 0) {
+        if ((aInKop + b) <= 0 ) { //10 3 50 0
             System.out.println("Ошибка");
-        } else if (a > 0 && b > 0 && c > 0 && d > 0) {  //1 3 5 8
-            e = a - c; //Сдача в рублях
-            f = b - d; //Сдача в копейках
-            if (e > 0 || f > 0) {
+        } else if ((aInKop + b) > 0 && (cInKop + d) > 0) {
+            e = (cInKop + d) - (aInKop + b) ; //Сдача
+            if ((cInKop + d) < (aInKop + b)) {
                 System.out.println("Нужно больше золота");
             } else {
-                System.out.println("Сдача составит " + e + " рублей и " + f + " копеек.");
+                System.out.println("Сдача составит " + (e/100) + " рублей и " + (e%100) + " копеек.");
             }
         }
     }

@@ -25,7 +25,7 @@ public class Five {
         int aInKop = a * 100; //Стоимость рублевой части перевести в копейки
         int cInKop = c * 100; //За него заплатили столько рублей и перевели в копейки
         int e; //Сдача в рублях
-        if ((aInKop + b) <= 0 ) { //10 3 50 0
+        if ((aInKop + b) <= 0 ) {
             System.out.println("Ошибка");
         } else if ((aInKop + b) > 0 && (cInKop + d) > 0) {
             e = (cInKop + d) - (aInKop + b) ; //Сдача
